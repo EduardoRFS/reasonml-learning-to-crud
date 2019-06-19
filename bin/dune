@@ -1,4 +1,12 @@
 (executable
   (name Hello)
+  (modules Hello)
   (public_name Hello)
-  (libraries lib))
+  (libraries lib httpaf httpaf-lwt-unix base stdio lwt lwt.unix)
+  (preprocess (pps lwt_ppx)))
+(executable
+  (name EchoAF)
+  (modules EchoAF)
+  (public_name EchoAF)
+  (libraries lib httpaf httpaf-lwt-unix base stdio lwt lwt.unix)
+  (preprocess (pps lwt_ppx)))
