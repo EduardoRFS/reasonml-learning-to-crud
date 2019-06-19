@@ -10,3 +10,9 @@
   (public_name EchoAF)
   (libraries lib httpaf httpaf-lwt-unix base stdio lwt lwt.unix)
   (preprocess (pps lwt_ppx)))
+(executable
+  (name EchoCO)
+  (modules EchoCO)
+  (public_name EchoCO)
+  (libraries lib cohttp cohttp-lwt-unix base stdio lwt lwt.unix)
+  (preprocess (pps lwt_ppx)))
