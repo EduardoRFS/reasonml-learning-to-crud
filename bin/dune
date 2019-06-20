@@ -16,3 +16,9 @@
   (public_name EchoCO)
   (libraries lib cohttp cohttp-lwt-unix base stdio lwt lwt.unix)
   (preprocess (pps lwt_ppx)))
+(executable
+  (name Route)
+  (modules Route)
+  (public_name Route)
+  (libraries lib opium base stdio lwt lwt.unix)
+  (preprocess (pps lwt_ppx)))
