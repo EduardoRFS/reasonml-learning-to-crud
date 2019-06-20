@@ -22,3 +22,9 @@
   (public_name Route)
   (libraries lib opium base stdio lwt lwt.unix)
   (preprocess (pps lwt_ppx)))
+(executable
+  (name RedisCrud)
+  (modules RedisCrud)
+  (public_name RedisCrud)
+  (libraries lib opium redis redis-lwt base stdio lwt lwt.unix)
+  (preprocess (pps lwt_ppx)))

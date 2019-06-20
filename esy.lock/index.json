@@ -1,5 +1,5 @@
 {
-  "checksum": "adb0db6635c30c53bdefe1c4ec02d82e",
+  "checksum": "7554b877286fc0b50468879d29a01312",
   "root": "hello-reason@link-dev:./package.json",
   "node": {
     "refmterr@3.1.10@d41d8cd9": {
@@ -49,6 +49,8 @@
         "@reason-native/pastel@0.2.1@d41d8cd9",
         "@reason-native/console@0.1.0@d41d8cd9",
         "@opam/stdio@opam:v0.12.0@1d18adcb",
+        "@opam/redis-lwt@opam:0.3.6@dc4777b2",
+        "@opam/redis@opam:0.3.6@29844f46",
         "@opam/opium@opam:0.17.1@a7414096",
         "@opam/lwt_ppx@opam:1.2.2@946c5ba2", "@opam/lwt@opam:4.2.1@c1888ec9",
         "@opam/httpaf-lwt-unix@opam:0.6.0@fad4d19f",
@@ -192,6 +194,32 @@
       "devDependencies": [
         "ocaml@4.6.10@d41d8cd9", "@opam/uchar@opam:0.0.2@c8218eea"
       ]
+    },
+    "@opam/uuidm@opam:0.9.7@bf725775": {
+      "id": "@opam/uuidm@opam:0.9.7@bf725775",
+      "name": "@opam/uuidm",
+      "version": "opam:0.9.7",
+      "source": {
+        "type": "install",
+        "source": [
+          "archive:https://opam.ocaml.org/cache/md5/54/54658248e3981d8c05237d0a4277ccd3#md5:54658248e3981d8c05237d0a4277ccd3",
+          "archive:https://erratique.ch/software/uuidm/releases/uuidm-0.9.7.tbz#md5:54658248e3981d8c05237d0a4277ccd3"
+        ],
+        "opam": {
+          "name": "uuidm",
+          "version": "0.9.7",
+          "path": "esy.lock/opam/uuidm.0.9.7"
+        }
+      },
+      "overrides": [],
+      "dependencies": [
+        "ocaml@4.6.10@d41d8cd9", "@opam/topkg@opam:1.0.0@61f4ccf9",
+        "@opam/ocamlfind@opam:1.8.0@f744a0c5",
+        "@opam/ocamlbuild@opam:0.14.0@427a2331",
+        "@opam/cmdliner@opam:1.0.4@93208aac",
+        "@esy-ocaml/substs@0.0.1@d41d8cd9"
+      ],
+      "devDependencies": [ "ocaml@4.6.10@d41d8cd9" ]
     },
     "@opam/uri@opam:2.2.1@6bd26f86": {
       "id": "@opam/uri@opam:2.2.1@6bd26f86",
@@ -472,6 +500,65 @@
         "@esy-ocaml/substs@0.0.1@d41d8cd9"
       ],
       "devDependencies": [ "ocaml@4.6.10@d41d8cd9" ]
+    },
+    "@opam/redis-lwt@opam:0.3.6@dc4777b2": {
+      "id": "@opam/redis-lwt@opam:0.3.6@dc4777b2",
+      "name": "@opam/redis-lwt",
+      "version": "opam:0.3.6",
+      "source": {
+        "type": "install",
+        "source": [
+          "archive:https://opam.ocaml.org/cache/md5/69/69c2dd7a17211436b08819dea13aa93a#md5:69c2dd7a17211436b08819dea13aa93a",
+          "archive:https://github.com/0xffea/ocaml-redis/archive/0.3.6.tar.gz#md5:69c2dd7a17211436b08819dea13aa93a"
+        ],
+        "opam": {
+          "name": "redis-lwt",
+          "version": "0.3.6",
+          "path": "esy.lock/opam/redis-lwt.0.3.6"
+        }
+      },
+      "overrides": [],
+      "dependencies": [
+        "ocaml@4.6.10@d41d8cd9", "@opam/redis@opam:0.3.6@29844f46",
+        "@opam/lwt@opam:4.2.1@c1888ec9",
+        "@opam/jbuilder@opam:transition@58bdfe0a",
+        "@esy-ocaml/substs@0.0.1@d41d8cd9"
+      ],
+      "devDependencies": [
+        "ocaml@4.6.10@d41d8cd9", "@opam/redis@opam:0.3.6@29844f46",
+        "@opam/lwt@opam:4.2.1@c1888ec9"
+      ]
+    },
+    "@opam/redis@opam:0.3.6@29844f46": {
+      "id": "@opam/redis@opam:0.3.6@29844f46",
+      "name": "@opam/redis",
+      "version": "opam:0.3.6",
+      "source": {
+        "type": "install",
+        "source": [
+          "archive:https://opam.ocaml.org/cache/md5/69/69c2dd7a17211436b08819dea13aa93a#md5:69c2dd7a17211436b08819dea13aa93a",
+          "archive:https://github.com/0xffea/ocaml-redis/archive/0.3.6.tar.gz#md5:69c2dd7a17211436b08819dea13aa93a"
+        ],
+        "opam": {
+          "name": "redis",
+          "version": "0.3.6",
+          "path": "esy.lock/opam/redis.0.3.6"
+        }
+      },
+      "overrides": [],
+      "dependencies": [
+        "ocaml@4.6.10@d41d8cd9", "@opam/uuidm@opam:0.9.7@bf725775",
+        "@opam/re@opam:1.9.0@7f4a36a5",
+        "@opam/jbuilder@opam:transition@58bdfe0a",
+        "@opam/base-unix@opam:base@87d0b2eb",
+        "@opam/base-bytes@opam:base@19d0c2ff",
+        "@esy-ocaml/substs@0.0.1@d41d8cd9"
+      ],
+      "devDependencies": [
+        "ocaml@4.6.10@d41d8cd9", "@opam/uuidm@opam:0.9.7@bf725775",
+        "@opam/re@opam:1.9.0@7f4a36a5", "@opam/base-unix@opam:base@87d0b2eb",
+        "@opam/base-bytes@opam:base@19d0c2ff"
+      ]
     },
     "@opam/re@opam:1.9.0@7f4a36a5": {
       "id": "@opam/re@opam:1.9.0@7f4a36a5",
